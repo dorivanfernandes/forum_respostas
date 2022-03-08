@@ -25,7 +25,7 @@ class SecurityConfiguration(
         http?.
         csrf()?.disable()?. //retirar isso em caso de prod
         authorizeRequests()?.
-        antMatchers("/topicos")?.hasAuthority("LEITURA_ESCRITAa")?.
+        antMatchers("/topicos")?.hasAuthority("LEITURA_ESCRITA")?.
         antMatchers(HttpMethod.POST,"/login")?.permitAll()?.
         anyRequest()?.
         authenticated()?.
